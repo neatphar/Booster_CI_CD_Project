@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Preperation'){
             steps {
-                sh "test -d django-app"
+                sh "test -d ./booster-project_master/django-app"
             }
         }
 
