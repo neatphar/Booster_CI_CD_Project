@@ -1,54 +1,32 @@
-# Booster_CI_CD_Project
+# Booster CI/CD Project
 
-Create CI/CD pipeline using jenkinsfile to deploy simple django web app as a microservice running on docker container locally
-mahmoud.alaa.aws.25492@gmail.com
+Create a CI/CD Jenkins pipeline using a jenkinsfile to deploy a simple django web app as a microservice running on a local docker container.
 
-# Steps
+Submissions will be through: mahmoud.alaa.aws.25492@gmail.com.
 
-1- Fork this repo to your account
+## Steps
 
-2- write dockerfile inside the forked repo to create new image from base image ubuntu and install python3.6 and pip3 and copy the source code files of the app to this image and configure it to start the server when creating container (check the below section for steps to start the django server) 
+1- Fork this repository into your account.
+2- Write a dockerfile in order to create a container image of the Django environment. Copy the source code into the container. Build and Deploy the app.
+3- Configure a Jenkins Master server along with two (production & testing) ubuntu slaves for the pipeline.
+4- Create a Slack workspace and integrate it with the Jenkins pipeline.
+5- Write a declarative jenkinsfile with the following stages for both development and production branches:
+- Preparation: Checkout the code.
+- Build Image: Build an image using the dockerfile.
+- Push Image: Push the image to a Docker Registry.
+- Deployment: Deploy a container from the image.
+- Notification: Send a slack message with the build status
+5- Show build statistics in the Jenkins GUI.
+7- Configure a Jenkins multibranch pipeline of the two branches (using nodes).
 
-3- configure ubuntu slave to use it for the pipeline
+## Commands You Will Use:
 
-4- create slck workspace and integrate it with jenkins
+  Building a Django app:
 
-5- install any plugin from your choice to create statistics about builds
+      pip install -r requirements.txt
+      python manage.py makemigrations
+      python manage.py migrate
 
-6- write jenkinsfile with the following four stages for both dev and master branch
+  Deploying a Django app:
 
-- preparation: checkout the code
-
-- build image: build image using the dockerfile
-
-- push image: push the built image to docker registry(docker hub)
-
-- deploy: deploy a container from the pushed image
-
-- notification: send slack message with the build status
-
-
-7- configure job in jenkins using multibranch pipeline type with the forked git repo url
-
-
-
-
-
-# Steps to start django server
-
-
-  install required packages:
-
-      pip3 install -r requirements.txt
-
-  make migrations for DB:
-
-      python3.6 manage.py makemigrations
-
-  apply the migrations:
-
-      python3.6 manage.py migrate
-
-  start the server:
-
-      python3.6 manage.py runserver 0.0.0.0:8000
+      python manage.py runserver 0.0.0.0:8000
