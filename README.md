@@ -1,6 +1,7 @@
 # Booster_CI_CD_Project
 
 Create CI/CD pipeline using jenkinsfile to deploy simple django web app as a microservice running on docker container locally
+mahmoud.alaa.aws.25492@gmail.com
 
 # Steps
 
