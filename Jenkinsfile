@@ -31,8 +31,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh """
-                    docker rm --force DjangoApp 2>> /dev/null 
-                    docker run --name DjangoApp -d -p $PORT:8000 neatphar/django-app
+                    docker rm --force DjangoApp-$ENV 2>> /dev/null 
+                    docker run --name DjangoApp-$ENV -d -p $PORT:8000 neatphar/django-app
                 """
             }
         }
