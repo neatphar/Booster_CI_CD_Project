@@ -1,5 +1,5 @@
 pipeline {
-    agent any //{label "python_builder"}
+    agent any
     environment { 
         ENV = "latest"
         PORT = "2020"
