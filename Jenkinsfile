@@ -2,7 +2,7 @@ pipeline {
     agent any //{label "python_builder"}
     environment { 
         ENV = "latest"
-        PORT = "80"
+        PORT = "2020"
     }
     stages {
         stage('Preperation'){
