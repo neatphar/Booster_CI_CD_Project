@@ -2,7 +2,7 @@ pipeline {
     agent any //{label "python_builder"}
     environment { 
         ENV = "latest"
-        PORT = "2020"
+        PORT = "80"
     }
     stages {
         stage('Preperation'){
@@ -40,10 +40,10 @@ pipeline {
     }
     post {
         success {
-            slackSend(channel: "build-info", color: "good", message: "A successful build attempt from the production pipeline.")
+            slackSend(channel: "build-info", color: "good", message: "A successful build attempt from the production pipeline (${BRANCH_NAME} branch).")
         }
         failure {
-            slackSend(channel: "build-info", color: "#ff0e0e", message: "The production pipeline has failed to build! <@U02G4M9T57D>")
+            slackSend(channel: "build-info", color: "#ff0e0e", message: "The production pipeline has failed to build (${BRANCH_NAME} branch)! <@U02G4M9T57D>")
         }
     } 
 }
