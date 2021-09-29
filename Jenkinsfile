@@ -37,14 +37,14 @@ pipeline {
             }
         }
 
-        post {
-            success {
-                slackSend(channel: "build-info", color: "good", message: "Successful build attempt from the production pipeline.")
-            }
-            failure {
-                def userId = slackUserIdFromEmail('neatphar@gmail.com')
-                slackSend(channel: "build-info", color: "bad", message: "<@$userId>! The production pipeline has failed to build!")
-            }
-        } 
     }
+    post {
+        success {
+            slackSend(channel: "build-info", color: "good", message: "Successful build attempt from the production pipeline.")
+        }
+        failure {
+            def userId = slackUserIdFromEmail('neatphar@gmail.com')
+            slackSend(channel: "build-info", color: "bad", message: "<@$userId>! The production pipeline has failed to build!")
+        }
+    } 
 }
