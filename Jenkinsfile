@@ -1,7 +1,7 @@
 pipeline {
-    agent any //{label "python_builder"}
+    agent {label "production && python"}
     environment { 
-        ENV = "latest"
+        ENV = "prod"
         PORT = "80"
     }
     stages {
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh """
                     docker rm --force DjangoApp-$ENV 2>> /dev/null 
-                    docker run --name DjangoApp-$ENV -d -p $PORT:8000 neatphar/django-app
+                    docker run --name DjangoApp-$ENV -d -p $PORT:8000 neatphar/django-app:$ENV
                 """
             }
         }
