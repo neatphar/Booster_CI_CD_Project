@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "python_builder"}
+    agent any //{label "python_builder"}
     environment { 
         ENV = "latest"
         PORT = "80"
@@ -10,7 +10,7 @@ pipeline {
                 sh "test -d django-app"
             }
         }
-        
+
         stage('Build') {
             steps {
                     sh "docker build -t neatphar/django-app:$ENV ."
