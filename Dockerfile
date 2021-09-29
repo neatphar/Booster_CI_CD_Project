@@ -3,8 +3,7 @@ FROM python:3.6
 RUN apt-get install git -y
 
 WORKDIR /usr/src/app
-RUN git clone https://github.com/neatphar/Booster_CI_CD_Project.git .
-
+COPY . .
 WORKDIR /usr/src/app/django_app
 
 RUN pip install --no-cache-dir -r requirements.txt
