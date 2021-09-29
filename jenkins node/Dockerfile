@@ -1,3 +1,6 @@
+# docker run -id -p 80:80 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
+
+
 FROM ubuntu
 
 USER root
@@ -22,9 +25,11 @@ RUN usermod -aG docker root; \
     mkdir jenkins; \
     mkdir ~/.ssh 2>> /dev/null; 
 
-COPY id_rsa.pub ~/.ssh/authorized_keys
-
 RUN apt-get install openjdk-8-jdk -qq; \
     apt-get install openssh-server -qq; \
     apt-get install git -qq; \
     service ssh start;
+
+COPY authorized_keys ~/.ssh/
+
+RUN service ssh restart;
