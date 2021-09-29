@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh """
                     docker rm --force DjangoApp-$ENV 2>> /dev/null 
-                    docker run --name DjangoApp-$ENV -d -p $PORT:8000 neatphar/django-app:$ENV
+                    docker run --name DjangoApp-$ENV -d -p $PORT:8000 neatphar/django-app
                 """
             }
         }
