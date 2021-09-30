@@ -1,8 +1,8 @@
 pipeline {
-    agent {label "production && python"}
+    agent {label "development && python"}
     environment { 
-        ENV = "prod"
-        PORT = "80"
+        ENV = "dev"
+        PORT = "9069"
     }
     stages {
         stage('Preperation'){
