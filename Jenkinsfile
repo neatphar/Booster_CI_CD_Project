@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label "python"}
     environment { 
         ENV = "latest"
         PORT = "2020"
