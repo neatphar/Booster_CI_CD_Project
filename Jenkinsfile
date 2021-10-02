@@ -21,7 +21,7 @@ pipeline {
         stage('Push') {
             steps {
                 sh """
-                    docker login -u ${DOCKER_HUB_USR} -p ${DOCKER_HUB_PWD}
+                    docker login -u ${DOCKER_HUB_USR} -p ${DOCKER_HUB_PSW}
                     docker push ${DOCKER_HUB_USR}/django-app:$ENV
                 """
             }
