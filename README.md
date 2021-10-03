@@ -39,7 +39,7 @@ Multiple brances were created in order to simulate the workflow used by the Djan
 * **Production Branch**: It represents the latest _running_ version of the application.
 * **Master Branch**: A clone of the production branch for convenience. 
 * **Develop Branch**: The branch that represents the most up-dated version currently under development.
-* **Fature Branches**: Temporary branches representing a feature of the application.
+* **Feature Branches**: Temporary branches representing a feature of the application.
 ![](https://buddy.works/blog/images/gitflow.png)
 
 Then, a Jenkins multibranch pipeline was created, representing the three major branches, Production, Master, Develop, with each branch's configuration stored in a **Jenkinsfile**. To ensure maximum uptime for both three branches, three nodes were created as executers for the Jenkins server.
