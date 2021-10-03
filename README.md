@@ -26,11 +26,8 @@
 - [Live Demo](#demo)
 - [Getting Started](#getting_started)
 - [Slack Integeration](#slack)
-- 
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
@@ -130,11 +127,9 @@ You can follow this [guide](https://github.com/jenkinsci/slack-plugin#install-in
 Give an example
 ```
 
-
-
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+You can schedule the build using the Build button for each branch and see the output of each pipeline individually.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
