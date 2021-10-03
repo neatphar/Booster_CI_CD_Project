@@ -23,8 +23,8 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
 - [Live Demo](#demo)
+- [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
@@ -48,8 +48,8 @@ Then, a Jenkins multibranch pipeline was created, representing the three major b
 
 ## 🚀 Live Demo <a name = "demo"></a>
 
-You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VM these links will be valid until **29th of November 2021**.
-* **Jenkins Server**: guest:guest @ http://167.172.177.126:8080
+You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VM these links will be valid until **29th of November, 2021.**
+* **Jenkins Server**: http://167.172.177.126:8080
 * **Production Branch Node**: http://167.172.177.126
 * **Master Branch Node**: http://167.172.177.126:2020
 * **Develop Branch Node**: http://167.172.177.126:9069
@@ -58,31 +58,57 @@ You can try out the Jenkins server and the three deployed versions using these l
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+This section will discuss how to deploy a copy of this project and run it on a virtual machine along with the Jenkins server and nodes for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+This project needs the following dependencies in order to function correctly:
 
 ```
-Give examples
+* A virtual machine with 2GB RAM and at least 5 GB of free space.
+* Docker.
+* Knowlegde of Jenkins CI/CD
+* Comfortable working with Python, especially Django Framework and Gunicorn.
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+A step by step guide to show you how to create the server and deploy the branches using **Dockerfile** and **Jenkinsfile** on Ubuntu.
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Build and run a Jenkins server Docker container using the Jenkins-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20with%20Docker/Dockerfile) to give Jenkins access to the Docker host CLI.
 
 ```
-until finished
+docker build -t jenkins-dockerized .
+chmod ugo+rx /var/run/docker.sock
+docker run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins jenkins-dockerized
 ```
+
+Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
+
+```
+docker build -t jenkins-node .
+chmod ugo+rx /var/run/docker.sock
+docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
+```
+Repeat the last step to make three different nodes with different name tags.
+
+Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
+
+```
+docker build -t jenkins-node .
+chmod ugo+rx /var/run/docker.sock
+docker run -id -p 8081:8081 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
+```
+
+
+Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
+
+```
+docker build -t jenkins-node .
+chmod ugo+rx /var/run/docker.sock
+docker run -id -p 8081:8081 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
+```
+
 
 End with an example of getting some data out of the system or using it for a little demo.
 
