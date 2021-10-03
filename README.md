@@ -90,23 +90,23 @@ docker build -t jenkins-node .
 chmod ugo+rx /var/run/docker.sock
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
 ```
-Repeat the last step to make three different nodes with different name tags.
+Repeat the last step to make other two different nodes with different name tags.
+```
+docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-2 jenkins-node
+docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-3 jenkins-node
+```
 
 Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
 
 ```
-docker build -t jenkins-node .
-chmod ugo+rx /var/run/docker.sock
-docker run -id -p 8081:8081 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
+
 ```
 
 
 Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
 
 ```
-docker build -t jenkins-node .
-chmod ugo+rx /var/run/docker.sock
-docker run -id -p 8081:8081 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
+
 ```
 
 
