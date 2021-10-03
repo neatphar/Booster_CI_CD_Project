@@ -108,14 +108,15 @@ docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-3
 docker exec -it Jenkins-Node-3 service ssh restart
 ```
 
-Then, login the jenkins platform using http://127.0.0.1:8080. Follow this [guide](https://acloudguru.com/blog/engineering/adding-a-jenkins-agent-node#h-step-5-add-the-jenkins-agent-node-via-the-jenkins-ui) to create the node agents on the server.
+Then, login the jenkins platform using http://127.0.0.1:8080. Follow this [guide](https://acloudguru.com/blog/engineering/adding-a-jenkins-agent-node#h-step-5-add-the-jenkins-agent-node-via-the-jenkins-ui) to connect the server to the node agents.
 
 P.S: You can use ```docker inspect Jenkins-Node-2 | grep '"IPAddress"' | awk -F: 'NR==1{print $2}'``` to find the IP address of a container.
 
+### Post-check
 
-End with an example of getting some data out of the system or using it for a little demo.
+You can use ```docker ps``` to see the four running containers.
 
-## 🔧 Running the tests <a name = "tests"></a>
+## 🔧 Slack <a name = "slack"></a>
 
 Explain how to run the automated tests for this system.
 
