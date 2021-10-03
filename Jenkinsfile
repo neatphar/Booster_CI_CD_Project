@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Preperation'){
             steps {
-                sh "test -d ./django_app" # Docker git clones the repo by default..
+                sh "test -d ./django_app" // Docker git clones the repo by default..
             }
         }
 
