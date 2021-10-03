@@ -63,12 +63,11 @@ This section will discuss how to deploy a copy of this project and run it on a v
 
 This project needs the following dependencies in order to function correctly:
 
-```
 * A virtual machine with 2GB RAM and at least 5 GB of free space.
-* Docker.
-* Knowlegde of Jenkins CI/CD
+* Docker >=  20.10.7
+* Knowlegde of Jenkins CI/CD.
 * Comfortable working with Python, especially Django Framework and Gunicorn.
-```
+* Good internet connection
 
 ### Installing
 
