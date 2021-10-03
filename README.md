@@ -91,7 +91,7 @@ docker exec -it Jenkins bash
 # logout
 ```
 
-Save the public key into a file named ```authorized_keys```,then  build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
+Save the public key into a file named ```authorized_keys```, then build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
 
 ```
 docker build -t jenkins-node .
@@ -108,18 +108,9 @@ docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-3
 docker exec -it Jenkins-Node-3 service ssh restart
 ```
 
-Then, follow this [guide]() to connect  as well.
+Then, login the jenkins platform using http://127.0.0.1:8080. Follow this [guide](https://acloudguru.com/blog/engineering/adding-a-jenkins-agent-node#h-step-5-add-the-jenkins-agent-node-via-the-jenkins-ui) to create the node agents on the server.
 
-```
-
-```
-
-
-Then, build and run a .
-
-```
-
-```
+P.S: You can use ```docker inspect Jenkins-Node-2 | grep '"IPAddress"' | awk -F: 'NR==1{print $2}'``` to find the IP address of a container.
 
 
 End with an example of getting some data out of the system or using it for a little demo.
