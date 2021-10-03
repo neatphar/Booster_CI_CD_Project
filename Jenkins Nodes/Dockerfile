@@ -1,6 +1,3 @@
-# docker run -id -p 80:80 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
-
-
 FROM ubuntu
 
 USER root
