@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                    sh "docker build -t ${DOCKER_HUB_USR}/django-app:$ENV ."
+                sh "docker build -t ${DOCKER_HUB_USR}/django-app:$ENV ."
             }
         }
 
