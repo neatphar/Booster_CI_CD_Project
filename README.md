@@ -55,7 +55,7 @@ You can try out the Jenkins server and the three deployed versions using these l
 * **Production Branch Node**: http://167.172.177.126
 * **Master Branch Node**: http://167.172.177.126:2020
 * **Develop Branch Node**: http://167.172.177.126:9069
-* **Slack Build Notification**: #build-info @ [Join Slack Workspace](https://join.slack.com/t/neatpharscicdproject/shared_invite/zt-wiv8h2oj-K6mIvgI9Zr4v4sl6h1jX2Q)
+* **Slack Build Notification**: _#build-info_ @ [Join Slack Workspace](https://join.slack.com/t/neatpharscicdproject/shared_invite/zt-wiv8h2oj-K6mIvgI9Zr4v4sl6h1jX2Q)
 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
@@ -120,7 +120,7 @@ You can use ```docker ps``` to see the four containers up and running.
 
 ## 🗂️ Slack Integeration <a name = "slack"></a>
 
-Integeration with Slack provides a method of notifying other team members of updates regarding the deployment process of the application, whether it succeeded or failed.
+Integeration with **Slack** provides a method of notifying other team members of updates regarding the deployment process of the application, whether it succeeded or failed.
 
 ### Integeration
 
@@ -138,19 +138,17 @@ Add notes about how to use the system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
+![](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white)
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@neatphar](https://github.com/neatphar) - Dockerization, Jenkins Pipeline, Documentation.
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/neatphar/Booster_CI_CD_Project/contributors) who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- [Edureka](https://www.edureka.co/community/55640/jenkins-docker-docker-image-jenkins-pipeline-docker-registry) for connecting Jenkins to Docker Host CLI.
+- [@mahmoud254](https://github.com/mahmoud254/Booster_CI_CD_Project) for the Django project.
