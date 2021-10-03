@@ -53,7 +53,7 @@ You can try out the Jenkins server and the three deployed versions using these l
 * **Production Branch Node**: http://167.172.177.126
 * **Master Branch Node**: http://167.172.177.126:2020
 * **Develop Branch Node**: http://167.172.177.126:9069
-* **Slack Build Notification**: https://join.slack.com/t/neatpharscicdproject/shared_invite/zt-wiv8h2oj-K6mIvgI9Zr4v4sl6h1jX2Q
+* **Slack Build Notification**: #build-info @ [Join Slack Workspace](https://join.slack.com/t/neatpharscicdproject/shared_invite/zt-wiv8h2oj-K6mIvgI9Zr4v4sl6h1jX2Q)
 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
