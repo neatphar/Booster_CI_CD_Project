@@ -81,7 +81,7 @@ chmod ugo+rx /var/run/docker.sock
 docker run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins jenkins-dockerized
 ```
 
-Log in the Jenkins container to create a ssh key pair using the following command
+Log into the Jenkins container to create a ssh key pair using the following command
 ```
 docker exec -it Jenkins bash
 # ssh-keygen
@@ -106,7 +106,7 @@ docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-3
 docker exec -it Jenkins-Node-3 service ssh restart
 ```
 
-Then, login the jenkins platform using http://127.0.0.1:8080. Follow this [guide](https://acloudguru.com/blog/engineering/adding-a-jenkins-agent-node#h-step-5-add-the-jenkins-agent-node-via-the-jenkins-ui) to connect the server to the node agents.
+Then, setup and log into the jenkins platform using http://127.0.0.1:8080. Follow this [guide](https://acloudguru.com/blog/engineering/adding-a-jenkins-agent-node#h-step-5-add-the-jenkins-agent-node-via-the-jenkins-ui) to connect the server to the node agents.
 
 **P.S**: You can use ```docker inspect Jenkins-Node-1 | grep '"IPAddress"' | awk -F'[:,\"]' 'NR==1{print $5}''``` to find the IP address of a container.
 
