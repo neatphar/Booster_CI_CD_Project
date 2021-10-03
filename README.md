@@ -83,27 +83,39 @@ chmod ugo+rx /var/run/docker.sock
 docker run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins jenkins-dockerized
 ```
 
-Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
+Log in the Jenkins container to create a ssh key pair using the following command
+```
+docker exec -it Jenkins bash
+# ssh-keygen
+# cat ~/.ssh/id_rsa.pub
+# logout
+```
+
+Save the public key into a file named ```authorized_keys```,then  build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
 
 ```
 docker build -t jenkins-node .
 chmod ugo+rx /var/run/docker.sock
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-1 jenkins-node
+docker exec -it Jenkins-Node-1 service ssh restart
 ```
-Repeat the last step to make other two different nodes with different name tags.
+
+Repeat the last two steps to make other two different nodes with different name tags.
 ```
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-2 jenkins-node
+docker exec -it Jenkins-Node-2 service ssh restart
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock --name Jenkins-Node-3 jenkins-node
+docker exec -it Jenkins-Node-3 service ssh restart
 ```
 
-Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
+Then, follow this [guide]() to connect  as well.
 
 ```
 
 ```
 
 
-Then, build and run a Jenkins node Container using Jenkins-node-with-Docker [Dockerfile](https://github.com/neatphar/Booster_CI_CD_Project/blob/additional/Jenkins%20Nodes/Dockerfile) as well.
+Then, build and run a .
 
 ```
 
