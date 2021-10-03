@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> This project is done mainly as an application of what I learnt in Sprints iCamp DevOps Program.
     <br> 
 </p>
 
@@ -34,7 +34,14 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+The deployment of a Dockerized Django application was automated through a multibranch pipeline Jenkins Job and then deployed on a cloud provider. The Django application was forked from **@mahmoud254/Booster_CI_CD_Project** repository, then a Dockerfile was made and committed into this repository. 
+
+Multiple brances were created in order to simulate the workflow used by the Django team as shown below:
+* **Production Branch**: It represents the latest _running_ version of the application.
+* **Master Branch**: A clone of the production branch for convenience. 
+* **Develop Branch**: The branch that represents the most up-dated version currently under development.
+* **Fature Branches**: Temporary branches representing a feature of the application.
+![](https://buddy.works/blog/images/gitflow.png)
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
