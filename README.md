@@ -24,7 +24,7 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Live Demo](#demo)
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
@@ -34,7 +34,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-The deployment of a Dockerized Django application was automated through a multibranch pipeline Jenkins Job and then deployed on a cloud provider. The Django application was forked from **@mahmoud254/Booster_CI_CD_Project** repository, then a Dockerfile was made and committed into this repository. 
+The deployment of a Dockerized Django application was automated through a multibranch pipeline Jenkins Job and then deployed on a cloud provider. The Django application was forked from **@mahmoud254/Booster_CI_CD_Project** repository, then a **Dockerfile** was made and committed into this repository. 
 
 Multiple brances were created in order to simulate the workflow used by the Django team as shown below:
 * **Production Branch**: It represents the latest _running_ version of the application.
@@ -42,6 +42,17 @@ Multiple brances were created in order to simulate the workflow used by the Djan
 * **Develop Branch**: The branch that represents the most up-dated version currently under development.
 * **Fature Branches**: Temporary branches representing a feature of the application.
 ![](https://buddy.works/blog/images/gitflow.png)
+
+Then a Jenkins multibranch pipeline was created, representing the three major branches, Production, Master, Develop, with each branch's configuration stored in a **Jenkinsfile**. To ensure maximum uptime for both three branches, three nodes were created as executers for the Jenkins server.
+
+
+## 🚀 Live Demo <a name = "demo"></a>
+
+You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VMWate these links will be valid until **29th of November 2021**.
+* **Jenkins Server**: guest:guest @ http://167.172.177.126:8080
+* **Production Branch Node**: http://167.172.177.126
+* **Master Branch Node**: http://167.172.177.126:2020
+* **Develop Branch Node**: http://167.172.177.126:9069
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -96,10 +107,6 @@ Give an example
 ## 🎈 Usage <a name="usage"></a>
 
 Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
