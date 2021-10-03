@@ -43,16 +43,18 @@ Multiple brances were created in order to simulate the workflow used by the Djan
 * **Fature Branches**: Temporary branches representing a feature of the application.
 ![](https://buddy.works/blog/images/gitflow.png)
 
-Then a Jenkins multibranch pipeline was created, representing the three major branches, Production, Master, Develop, with each branch's configuration stored in a **Jenkinsfile**. To ensure maximum uptime for both three branches, three nodes were created as executers for the Jenkins server.
+Then, a Jenkins multibranch pipeline was created, representing the three major branches, Production, Master, Develop, with each branch's configuration stored in a **Jenkinsfile**. To ensure maximum uptime for both three branches, three nodes were created as executers for the Jenkins server.
 
 
 ## 🚀 Live Demo <a name = "demo"></a>
 
-You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VMWate these links will be valid until **29th of November 2021**.
+You can try out the Jenkins server and the three deployed versions using these links. However, due to the unnecessary cost of running a VM these links will be valid until **29th of November 2021**.
 * **Jenkins Server**: guest:guest @ http://167.172.177.126:8080
 * **Production Branch Node**: http://167.172.177.126
 * **Master Branch Node**: http://167.172.177.126:2020
 * **Develop Branch Node**: http://167.172.177.126:9069
+* **Slack Build Notification**: https://join.slack.com/t/neatpharscicdproject/shared_invite/zt-wiv8h2oj-K6mIvgI9Zr4v4sl6h1jX2Q
+
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
