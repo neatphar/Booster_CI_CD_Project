@@ -122,10 +122,6 @@ Integeration with **Slack** provides a method of notifying other team members of
 
 You can follow this [guide](https://github.com/jenkinsci/slack-plugin#install-instructions-for-slack) to integerate a Jenkins Bot into your workspace slack channel.
 
-```
-Give an example
-```
-
 ## 🎈 Usage <a name="usage"></a>
 
 You can schedule the build using the Build button for each branch and see the output of each pipeline individually.
