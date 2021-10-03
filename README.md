@@ -25,6 +25,8 @@
 - [About](#about)
 - [Live Demo](#demo)
 - [Getting Started](#getting_started)
+- [Slack Integeration](#slack)
+- 
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
@@ -114,27 +116,21 @@ P.S: You can use ```docker inspect Jenkins-Node-2 | grep '"IPAddress"' | awk -F:
 
 ### Post-check
 
-You can use ```docker ps``` to see the four running containers.
+You can use ```docker ps``` to see the four containers up and running.
 
-## 🔧 Slack <a name = "slack"></a>
+## 🗂️ Slack Integeration <a name = "slack"></a>
 
-Explain how to run the automated tests for this system.
+Integeration with Slack provides a method of notifying other team members of updates regarding the deployment process of the application, whether it succeeded or failed.
 
-### Break down into end to end tests
+### Integeration
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+You can follow this [guide](https://github.com/jenkinsci/slack-plugin#install-instructions-for-slack) to integerate a Jenkins Bot into your workspace slack channel.
 
 ```
 Give an example
 ```
+
+
 
 ## 🎈 Usage <a name="usage"></a>
 
